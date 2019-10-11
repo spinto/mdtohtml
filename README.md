@@ -10,7 +10,7 @@ To install the software you can:
 
 ```
 VERSION=0.2
-curl https://github.com/spinto/mdtohtml/archive/v$VERSION.tar.gz | sudo tar xvz -C /usr/local/
+curl -L https://github.com/spinto/mdtohtml/archive/v$VERSION.tar.gz | sudo tar xvz -C /usr/local/
 sudo ln -s /usr/local/mdtohtml-$VERSION/mdtohtml.sh /usr/local/bin/mdtohtml
 ```
 
