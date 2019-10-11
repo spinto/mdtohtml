@@ -50,7 +50,8 @@ done
 [[ -e "$_INPUT_FILE" ]] || error 2 "Input file $_INPUT_FILE does not exist"
 touch "$_OUTPUT_FILE" &>/dev/null || error 2 "Cannot write to $_OUTPUT_FILE"
 OUTFOLDER="${_OUTPUT_FILE%/*}"; [[ "$OUTFOLDER" == "$_OUTPUT_FILE" ]] && OUTFOLDER="."; [[ -z "$OUTFOLDER" ]] && OUTFOLDER="."
-APPFOLDER="${0%/*}"; [[ "$APPFOLDER" == "$0" ]] && APPFOLDER="."; [[ -z "$APPFOLDER" ]] && APPFOLDER="."
+APPNAME="`readlink -f ${BASH_SOURCE[0]}`"
+APPFOLDER="${APPNAME%/*}"; [[ "$APPFOLDER" == "$0" ]] && APPFOLDER="."; [[ -z "$APPFOLDER" ]] && APPFOLDER="."
 
 #Generate HTML
 cat <<EOF > $_OUTPUT_FILE

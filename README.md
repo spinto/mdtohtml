@@ -6,12 +6,12 @@ The HTML can be then rendered to PDF via [wkhtmltopdf](https://wkhtmltopdf.org/)
 All the software dependencies are included in the _js_ folder.
 
 To install the software you can:
- - Download it into your /usr/local/mdtohtml folder and then link it in the /usr/bin folder
+ - Download it into your /usr/local/ folder and then link it in the /usr/local/bin folder
 
 ```
-cd /usr/local
-sudo git clone https://github.com/spinto/mdtohtml
-sudo ln -s /usr/local/mdtohtml/mdtohtml.sh /usr/bin/mdtohtml
+VERSION=0.2
+curl https://github.com/spinto/mdtohtml/archive/v$VERSION.tar.gz | sudo tar xvz -C /usr/local/
+sudo ln -s /usr/local/mdtohtml-$VERSION/mdtohtml.sh /usr/local/bin/mdtohtml
 ```
 
 # Usage:
