@@ -106,7 +106,7 @@ elif [[ $_JS_DEPENDENCIES == "internal" ]]; then
   done
 elif [[ $_JS_DEPENDENCIES == "external" ]]; then
   cat <<EOF >> $_OUTPUT_FILE
-<script src="https://cdn.rawgit.com/showdownjs/showdown/1.9.0/dist/showdown.min.js"></script>
+<script src="https://cdn.rawgit.com/showdownjs/showdown/1.9.1/dist/showdown.min.js"></script>
 EOF
 else
   error 5 "Internal inconsistency. This should never happen!"
