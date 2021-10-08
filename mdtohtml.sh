@@ -116,7 +116,7 @@ cat << EOF >> $_OUTPUT_FILE
 <script>
 function run() {
   var text = document.getElementById('sourceTA').value;
-  var converter = new showdown.Converter({tables: true, strikethrough: true, ghCompatibleHeaderId: true, simplifiedAutoLink: true, excludeTrailingPunctuationFromURLs: true, ghCodeBlocks: true, tasklists: true, ghMentions: true,ghMentionsLink: true,smartIndentationFix: true,simpleLineBreaks: true,emoji: true, underline: true});
+  var converter = new showdown.Converter({tables: true, strikethrough: true, ghCompatibleHeaderId: true, simplifiedAutoLink: true, excludeTrailingPunctuationFromURLs: true, ghCodeBlocks: true, tasklists: true, ghMentions: false, ghMentionsLink: "",smartIndentationFix: true,simpleLineBreaks: true,emoji: true, underline: true});
   document.body.innerHTML = converter.makeHtml(text);
 }
 run();
